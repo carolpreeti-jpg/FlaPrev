@@ -1,0 +1,6 @@
+- **Tailwind CSS** — utility-first CSS framework loaded via local runtime (`resource_3fa48481346f.es`) and used for all layout, color, spacing, transforms and hover utilities
+- **Iconify** — web-component icon runtime (`iconify-icon_e19829e7f0e8.js`) that renders every `<iconify-icon>` element with icons from the `solar:` icon set
+- **Google Fonts (Anton, Oswald, Permanent Marker)** — typography stack served from `assets/css2_adf3bf67eea9.css` plus the local `.woff2` files for headings (Anton), body (Oswald), and accent quotes (Permanent Marker)
+- **Custom CSS (Persona 5 styling)** — bespoke stylesheet defining design tokens, halftone backgrounds, jagged/slanted/starburst clip-path shapes, slide-in and pulse keyframes, and webkit scrollbar theming
+- **Aura Supabase token firewall** — bundled inline guard script that intercepts `localStorage`, `sessionStorage`, `document.cookie`, `fetch`, `XMLHttpRequest`, `sendBeacon` and `WebSocket` to block reads of Supabase auth tokens and sensitive Supabase API calls
+- **Image fallback handler** — bundled inline script that catches `<img>` load errors and substitutes URLs from a hashed pool of Supabase-hosted assets

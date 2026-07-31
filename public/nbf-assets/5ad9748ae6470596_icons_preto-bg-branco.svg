@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#C80000;}
+</style>
+<g>
+	<path class="st0" d="M10,99.5c-5.24,0-9.5-4.26-9.5-9.5V10c0-5.24,4.26-9.5,9.5-9.5h80c5.24,0,9.5,4.26,9.5,9.5v80   c0,5.24-4.26,9.5-9.5,9.5H10z"></path>
+	<path class="st1" d="M90,1c4.96,0,9,4.04,9,9v80c0,4.96-4.04,9-9,9H10c-4.96,0-9-4.04-9-9V10c0-4.96,4.04-9,9-9H90 M90,0H10   C4.48,0,0,4.48,0,10v80c0,5.52,4.48,10,10,10h80c5.52,0,10-4.48,10-10V10C100,4.48,95.52,0,90,0L90,0z"></path>
+</g>
+<g>
+	<path class="st2" d="M19.78,17.27l-0.95,6.05c13.43,2.73,25.41,9.5,34.59,18.99l13.81-9.07c0,0,1.59-1.07,2.34-0.18   c0,0,0.72,0.7-0.67,2.19L57.57,47.02c7.99,9.97,13.17,22.28,14.35,35.72h6.46l10.24-65.47L19.78,17.27z"></path>
+	<path class="st2" d="M33.01,63.9l-0.63-0.76l14.77-16.6c-7.95-7.86-18.12-13.49-29.46-15.87l-6.02,38.48   c-1.05,7.22,0.26,13.58,12.29,13.58l40.49,0c-1.12-11.36-5.46-21.78-12.1-30.34L33.01,63.9z"></path>
+</g>
+</svg>
