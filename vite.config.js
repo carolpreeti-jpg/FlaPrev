@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 // A pasta nbf/ é um site espelhado de referência e deve ser ignorada
 // pelo scanner de dependências do Vite.
 export default defineConfig({
+  base: '/FlaPrev/',
   optimizeDeps: {
     entries: ['index.html'],
   },
