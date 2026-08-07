@@ -9,10 +9,10 @@
 <script src="assets/js/security-firewall.js"></script>
 <!-- iconify runtime: renders <iconify-icon> elements throughout the page -->
 <script src="assets/iconify-icon_e19829e7f0e8.js"></script>
-<!-- google fonts: Anton (headings), Oswald (body), Permanent Marker (accent) -->
+<!-- google fonts: Anton (headings), Oswald (body), Permanent Marker (accent), Montserrat (FlaPrev wordmark) -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&family=Permanent+Marker&family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet"/>
 <!-- tailwind runtime: provides every utility class used in markup; must stay in head -->
 <script src="assets/resource_3fa48481346f.es"></script>
 <!-- design tokens, halftone backgrounds, clip-path shapes, keyframes and scrollbar -->
@@ -22,15 +22,7 @@
 
 <!-- ============ NAVBAR ============ -->
 <nav class="fixed top-0 w-full z-50 pointer-events-none">
-  <div class="flex justify-between items-start pt-6 px-4 md:px-12">
-    <a href="#topo" class="pointer-events-auto transform -rotate-2 origin-top-left group">
-      <div class="bg-black text-white p-4 clip-jagged border-2 border-white relative z-10 transition-transform duration-200 group-hover:scale-110">
-        <h1 class="font-anton text-3xl md:text-4xl tracking-tighter uppercase leading-none">
-          <span class="text-red-600">Fla</span>Prev
-        </h1>
-      </div>
-      <div class="absolute inset-0 bg-red-600 clip-jagged transform translate-x-2 translate-y-2 -z-0"></div>
-    </a>
+  <div class="flex justify-end items-start pt-6 px-4 md:px-12">
     <div class="hidden md:flex space-x-4 pointer-events-auto">
       <a class="relative group" href="#o-plano">
         <div class="bg-white text-black px-5 py-2 transform -skew-x-12 border-2 border-black transition-all duration-300 group-hover:bg-red-600 group-hover:text-white group-hover:translate-y-1">
@@ -62,12 +54,13 @@
 <!-- ============ HERO ============ -->
 <header id="topo" class="hero-bg relative min-h-screen w-full flex items-end md:items-center justify-center overflow-hidden pt-24 pb-16">
   <div class="absolute inset-0 bg-black/45 z-0"></div>
+  <a href="#topo" class="absolute top-6 left-4 md:left-12 z-20">
+    <img alt="Logo" class="h-[27px] md:h-[34px] w-auto" src="/logo.png"/>
+  </a>
   <div class="container mx-auto px-6 md:px-4 relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-    <div class="flex flex-col items-start space-y-5 md:space-y-6 animate-enter-left ml-[5%] md:ml-[30%]">
-      <h2 class="font-anton text-6xl md:text-9xl uppercase leading-[0.85] text-white text-shadow-hard transform md:-rotate-2">
-        Fla<span class="text-red-600">Prev</span>
-      </h2>
-      <p class="font-marker text-base md:text-2xl text-gray-200 bg-black/80 p-3 md:p-4 transform md:rotate-1 max-w-md border-l-4 border-red-600">
+    <div class="flex flex-col items-start space-y-5 md:space-y-6 animate-enter-left ml-[0%] md:ml-[25%]">
+      <h2 class="text-5xl md:text-7xl lg:text-8xl uppercase italic text-white -translate-x-[5%] transform md:-rotate-2" style="font-family: 'Montserrat', sans-serif; font-weight: 800;">FLAPREV</h2>
+      <p class="font-marker text-base md:text-2xl text-gray-200 p-3 md:p-4 transform md:rotate-1 max-w-md border-l-4 border-red-600">
         O plano de previdência da Nação Rubro-negra!<br/>
         Contribua a partir de <span class="text-red-500 font-bold">R$ 150</span> e garanta hoje<br/>
         o futuro que você sonha.
@@ -95,7 +88,7 @@
     <div class="flex flex-col items-center text-center mb-12">
       <h2 class="bg-black text-white font-anton text-3xl md:text-6xl px-6 md:px-8 py-2 whitespace-nowrap transform -skew-x-12 -rotate-2 border-4 border-red-600 box-shadow-hard mb-12">POR QUE O FLAPREV?</h2>
       <p class="max-w-3xl font-medium text-lg md:text-xl leading-snug px-4 md:px-0">
-        O FlaPrev é o plano de previdência complementar criado especialmente para a Nação Rubro-negra. Aberto a torcedores, clientes, sócios e funcionários do Flamengo, ele <span class="bg-red-600 text-white px-1">não tem limite de idade</span> para adesão e pode ser contratado a partir de <span class="bg-black text-white px-1">R$ 150,00 por mês</span>.
+        O FlaPrev é o plano de previdência complementar criado especialmente para a Nação Rubro-negra. Aberto aos clientes do Nação BRB Fla, ele <span class="bg-red-600 text-white px-1">não tem limite de idade</span> para adesão e pode ser contratado a partir de <span class="bg-black text-white px-1">R$ 150,00 por mês</span>.
       </p>
       <p class="max-w-3xl font-medium text-lg md:text-xl leading-snug px-4 md:px-0 mt-4">
         É uma forma simples e segura de construir uma reserva para o futuro e ainda contar com benefícios fiscais no caminho, para você e seus beneficiários indicados.
@@ -110,10 +103,10 @@
   <div class="absolute bottom-20 right-10 w-96 h-96 bg-red-800 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 1s;"></div>
   <div class="container mx-auto px-4 relative z-10">
     <div class="flex flex-col items-center mb-4">
-<h2 class="bg-white text-black font-anton text-3xl md:text-6xl px-4 py-2 md:px-8 md:py-2 transform -skew-x-12 rotate-2 border-4 border-black box-shadow-hard mb-4 text-center">UM INVESTIMENTO<br/>QUE VALE A PENA</h2>
+<h2 class="bg-white text-black font-anton text-2xl md:text-5xl px-4 py-2 md:px-8 md:py-2 transform -skew-x-12 border-4 border-black box-shadow-hard mb-4 text-center whitespace-nowrap">UM INVESTIMENTO QUE VALE A PENA</h2>
     </div>
     <p class="max-w-3xl mx-auto text-center text-gray-200 font-medium text-lg leading-snug mb-12">
-      O FlaPrev é um plano de Contribuição Definida, equivalente a um PGBL, administrado pela Previdência BRB. Você escolhe entre carteiras <span class="text-red-500 font-bold">conservadora</span>, <span class="text-red-500 font-bold">moderada</span> ou <span class="text-red-500 font-bold">arrojada</span>, e conta ainda com cobertura por morte e invalidez, em parceria com a Mag Seguros.
+      O FlaPrev é um plano de previdência complementar na modalidade contribuição definida e administrado pela Previdência BRB. Você escolhe entre carteiras <span class="text-red-500 font-bold">conservadora</span>, <span class="text-red-500 font-bold">moderada</span> ou <span class="text-red-500 font-bold">arrojada</span>, e conta ainda com cobertura por morte e invalidez, em parceria com a Mag Seguros.
     </p>
 
     <!-- stats -->
@@ -173,7 +166,7 @@
               <iconify-icon icon="solar:card-linear" width="24"></iconify-icon>
             </div>
             <h3 class="font-anton text-2xl mb-2 transform -skew-x-6 text-red-500">PAGUE COMO QUISER</h3>
-            <p class="font-medium leading-tight text-gray-300">Boleto, PIX, débito em conta ou cartão de crédito. Você escolhe.</p>
+            <p class="font-medium leading-tight text-gray-300">Conta Nação BRB Fla, boleto, PIX, débito em conta ou cartão de crédito. Você escolhe.</p>
           </div>
         </div>
       </div>
@@ -207,14 +200,14 @@
           <div class="relative z-10 bg-red-100 text-red-600 w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0 transition-colors duration-300 group-hover:bg-white/20 group-hover:text-white">
             <iconify-icon icon="solar:graph-up-linear" width="20"></iconify-icon>
           </div>
-          <p class="relative z-10 font-medium leading-tight text-gray-700 transition-colors duration-300 group-hover:text-white"><strong class="text-black transition-colors duration-300 group-hover:text-white">Sem imposto sobre os rendimentos</strong> durante toda a fase de acumulação.</p>
+          <p class="relative z-10 font-medium leading-tight text-gray-700 transition-colors duration-300 group-hover:text-white"><strong class="text-black transition-colors duration-300 group-hover:text-white">Sem imposto sobre os rendimentos</strong> durante toda a fase de acumulação e pagamento dos benefícios.</p>
         </div>
         <div class="group relative overflow-hidden flex items-center gap-4 bg-gray-50 text-black p-5">
           <div class="absolute inset-y-0 left-0 w-1 bg-red-600 transition-all duration-300 ease-out group-hover:w-full"></div>
           <div class="relative z-10 bg-red-100 text-red-600 w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0 transition-colors duration-300 group-hover:bg-white/20 group-hover:text-white">
             <iconify-icon icon="solar:hand-heart-linear" width="20"></iconify-icon>
           </div>
-          <p class="relative z-10 font-medium leading-tight text-gray-700 transition-colors duration-300 group-hover:text-white">Pecúlio por morte pago aos beneficiários <strong class="text-black transition-colors duration-300 group-hover:text-white">sem IR e sem ITCMD</strong>.</p>
+          <p class="relative z-10 font-medium leading-tight text-gray-700 transition-colors duration-300 group-hover:text-white">Pecúlio por morte pago aos beneficiários <strong class="text-black transition-colors duration-300 group-hover:text-white">sem IR e sem inventário</strong>.</p>
         </div>
       </div>
     </div>
@@ -222,32 +215,37 @@
 </section>
 
 <!-- ============ COMO FUNCIONA O BENEFÍCIO ============ -->
-<section class="py-24 relative overflow-hidden bg-neutral-900">
+<section class="pt-24 pb-0 relative overflow-hidden bg-neutral-900">
   <div class="container mx-auto px-4 relative z-10">
-    <div class="flex flex-col items-center mb-14">
-      <h2 class="bg-white text-black font-anton text-3xl md:text-6xl px-4 py-2 md:px-8 md:py-2 transform -skew-x-12 -rotate-2 border-4 border-black box-shadow-hard text-center">COMO FUNCIONA<br/>O BENEFÍCIO</h2>
-    </div>
-    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-      <div class="bg-black border-2 border-red-600 p-8 transform hover:-translate-y-2 transition-transform clip-jagged">
-        <div class="flex items-center gap-3 mb-4">
-          <iconify-icon class="text-red-600" icon="solar:calendar-mark-bold" width="40"></iconify-icon>
-          <h3 class="font-anton text-3xl uppercase">Sua aposentadoria</h3>
-        </div>
-        <p class="font-medium text-gray-200 leading-snug">Ao se aposentar, você recebe uma renda por prazo determinado, entre <span class="text-red-500 font-bold">5 e 30 anos,</span> com a possibilidade de antecipar até <span class="text-red-500 font-bold">12 parcelas.</span></p>
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto items-end">
+      <div class="flex justify-center md:justify-start">
+        <img alt="Mulher sorrindo" class="w-full max-w-xs md:w-[38rem] md:max-w-none h-auto md:-ml-16 -translate-x-[20%] transform" src="/mulher.png"/>
       </div>
-      <div class="bg-red-600 border-2 border-black p-8 transform hover:-translate-y-2 transition-transform clip-jagged">
-        <div class="flex items-center gap-3 mb-4">
-          <iconify-icon class="text-black" icon="solar:users-group-two-rounded-bold" width="40"></iconify-icon>
-          <h3 class="font-anton text-3xl uppercase text-black">Seus beneficiários</h3>
+      <div class="flex flex-col gap-10 pb-24">
+        <h2 class="font-anton text-4xl md:text-6xl uppercase leading-none transform -rotate-1 text-left">
+          <span class="inline-block -translate-y-[10%] text-white">Como funciona</span><br/><span class="bg-red-600 text-white px-2 inline-block">o benefício</span>
+        </h2>
+        <div class="bg-black border-2 border-red-600 p-8 transform hover:-translate-y-2 transition-transform clip-jagged">
+          <div class="flex items-center gap-3 mb-4">
+            <iconify-icon class="text-red-600" icon="solar:calendar-mark-bold" width="40"></iconify-icon>
+            <h3 class="font-anton text-3xl uppercase">Sua aposentadoria</h3>
+          </div>
+          <p class="font-medium text-gray-200 leading-snug">Ao se aposentar, você recebe uma renda por prazo determinado, entre <span class="text-red-500 font-bold">5 e 30 anos,</span> com a possibilidade de antecipar até <span class="text-red-500 font-bold">12 parcelas.</span></p>
         </div>
-        <p class="font-medium text-white leading-snug">Em caso de falecimento, os beneficiários indicados recebem o pecúlio, <strong>sem incidência de Imposto de Renda</strong>.</p>
+        <div class="bg-red-600 border-2 border-black p-8 transform hover:-translate-y-2 transition-transform clip-jagged">
+          <div class="flex items-center gap-3 mb-4">
+            <iconify-icon class="text-black" icon="solar:users-group-two-rounded-bold" width="40"></iconify-icon>
+            <h3 class="font-anton text-3xl uppercase text-black">Seus beneficiários</h3>
+          </div>
+          <p class="font-medium text-white leading-snug">Em caso de falecimento, os beneficiários indicados recebem o pecúlio, <strong>sem incidência de Imposto de Renda</strong>.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ DOCUMENTOS ============ -->
-<section id="documentos" class="relative bg-white text-black py-20 border-t-8 border-black overflow-hidden">
+<section id="documentos" class="relative bg-white text-black py-20 overflow-hidden">
   <div class="absolute top-0 left-0 w-full h-full bg-halftone-white opacity-40 pointer-events-none"></div>
   <div class="container mx-auto px-4 relative z-10 text-center">
     <h2 class="font-anton text-4xl md:text-5xl uppercase mb-3 transform -rotate-1">Leia o Regulamento e a Cartilha</h2>
