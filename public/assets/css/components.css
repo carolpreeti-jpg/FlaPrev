@@ -1,16 +1,32 @@
 /* Persona 5 Style Resources */
 :root {
-  --p5-red: #D92323;
-  --p5-black: #1a1a1a;
+  --p5-red: #220404;
+  --p5-black: #1F1F1F;
   --p5-grey: #2F2F2F;
+  --p5-primary: #FF0000;
+  --p5-error: #D32F2F;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* anchors sit clear of the floating nav buttons instead of flush against the viewport top */
+#topo, #o-plano, #vantagens, #documentos, #aderir, #faq {
+  scroll-margin-top: 24px;
+}
+/* FAQ accordion */
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::marker { content: ""; }
+.faq-item[open] .faq-icon { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 body {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Manrope', sans-serif;
   background-color: #000000;
   overflow-x: hidden;
 }
-.font-marker { font-family: 'Oswald', sans-serif; }
-.font-anton { font-family: 'Anton', sans-serif; }
+.font-marker { font-family: 'Manrope', sans-serif; }
+.font-anton { font-family: 'Manrope', sans-serif; font-weight: 800; }
 .hero-bg {
   background-image: url('../../fundo-capa.png');
   background-size: cover;
@@ -22,7 +38,7 @@ body {
 /* Comic Halftone Pattern */
 .bg-halftone {
   background-image: radial-gradient(#202020 20%, transparent 20%), radial-gradient(#202020 20%, transparent 20%);
-  background-color: var(--p5-red);
+  background-color: var(--p5-primary);
   background-position: 0 0, 5px 5px;
   background-size: 10px 10px;
 }
@@ -70,5 +86,5 @@ body {
 }
 /* Scrollbar */
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #1a1a1a; }
-::-webkit-scrollbar-thumb { background: #D92323; }
+::-webkit-scrollbar-track { background: #1F1F1F; }
+::-webkit-scrollbar-thumb { background: #FF0000; }
