@@ -71,11 +71,16 @@
           <span class="font-bold tracking-tight text-base transform skew-x-12 inline-block">FAQ</span>
         </div>
       </a>
-      <a class="relative group" href="#aderir">
-        <div class="bg-red-600 text-white px-5 py-2 transform -skew-x-12 border-2 border-black transition-all duration-300 group-hover:bg-white group-hover:text-black group-hover:translate-y-1">
-          <span class="font-bold tracking-tight text-base transform skew-x-12 inline-block">QUERO ADERIR</span>
+      <a class="relative group" href="#">
+        <div class="bg-white text-black px-5 py-2 transform -skew-x-12 border-2 border-black transition-all duration-300 group-hover:bg-red-600 group-hover:text-white group-hover:translate-y-1">
+          <span class="font-bold tracking-tight text-base transform skew-x-12 inline-block">SIMULAR BENEFÍCIOS</span>
         </div>
       </a>
+      <div class="relative group">
+        <div class="bg-red-600 text-white px-5 py-2 transform -skew-x-12 border-2 border-black">
+          <span class="font-bold tracking-tight text-base transform skew-x-12 inline-block">QUERO ADERIR</span>
+        </div>
+      </div>
     </div>
     <div class="md:hidden pointer-events-auto relative">
       <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu" class="bg-white text-black p-2 border-2 border-black transform -rotate-3">
@@ -86,7 +91,8 @@
         <a class="bg-black text-white px-5 py-3 border-2 border-white font-bold tracking-tight text-center" href="#vantagens">VANTAGENS</a>
         <a class="bg-white text-black px-5 py-3 border-2 border-black font-bold tracking-tight text-center" href="#documentos">DOCUMENTOS</a>
         <a class="bg-black text-white px-5 py-3 border-2 border-white font-bold tracking-tight text-center" href="#faq">FAQ</a>
-        <a class="bg-red-600 text-white px-5 py-3 border-2 border-black font-bold tracking-tight text-center" href="#aderir">QUERO ADERIR</a>
+        <a class="bg-white text-black px-5 py-3 border-2 border-black font-bold tracking-tight text-center" href="#">SIMULAR BENEFÍCIOS</a>
+        <div class="bg-red-600 text-white px-5 py-3 border-2 border-black font-bold tracking-tight text-center">QUERO ADERIR</div>
       </div>
     </div>
   </div>
@@ -103,15 +109,21 @@
         <span class="block whitespace-nowrap">Contribua a partir de <span class="text-red-500 font-extrabold">R$ 150</span> e garanta</span>
         <span class="block whitespace-nowrap">hoje o futuro que você sonha.</span>
       </p>
-      <div class="pt-3 transform hover:scale-105 transition-transform duration-200">
-        <a href="#aderir" class="relative group inline-block">
+      <div class="pt-3 flex flex-col items-start gap-3">
+        <div class="relative group inline-block">
           <div class="absolute inset-0 bg-black translate-x-2 translate-y-2 clip-slant-right"></div>
-          <div class="relative bg-red-600 text-white px-9 py-4 md:px-10 md:py-5 clip-slant-right border-2 border-black group-hover:bg-white group-hover:text-black transition-colors">
+          <div class="relative bg-red-600 text-white px-9 py-4 md:px-10 md:py-5 clip-slant-right border-2 border-black">
             <span class="font-anton text-xl md:text-2xl tracking-wide uppercase flex items-center gap-2">Quero aderir
               <iconify-icon icon="solar:arrow-right-linear" width="24"></iconify-icon>
             </span>
           </div>
-        </a>
+        </div>
+        <div class="relative group inline-block">
+          <div class="absolute inset-0 bg-black translate-x-1.5 translate-y-1.5 clip-slant-right"></div>
+          <div class="relative bg-white text-black px-6 py-3 clip-slant-right border-2 border-black">
+            <span class="font-anton text-sm md:text-base tracking-wide uppercase">Simular benefícios</span>
+          </div>
+        </div>
       </div>
     </div>
     <!-- espaço reservado para foto -->
@@ -729,11 +741,11 @@
           <span class="font-bold tracking-tight text-xs md:text-base transform skew-x-12 inline-block whitespace-nowrap">FAQ</span>
         </div>
       </a>
-      <a class="relative group" href="#aderir">
-        <div class="bg-red-600 text-white px-3 py-2 md:px-7 md:py-3 transform -skew-x-12 border-2 border-black transition-all duration-300 group-hover:bg-white group-hover:text-black group-hover:-translate-y-1">
+      <div class="relative group">
+        <div class="bg-red-600 text-white px-3 py-2 md:px-7 md:py-3 transform -skew-x-12 border-2 border-black">
           <span class="font-bold tracking-tight text-xs md:text-base transform skew-x-12 inline-block whitespace-nowrap">QUERO ADERIR</span>
         </div>
-      </a>
+      </div>
     </nav>
     <div class="text-center md:text-left font-mono text-xs text-gray-500">
       <p class="flex items-center gap-3">
@@ -782,8 +794,8 @@
 (function () {
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function easeInOutCubic(t) {
-    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  function easeInOutSine(t) {
+    return -(Math.cos(Math.PI * t) - 1) / 2;
   }
 
   var activeAnimationId = 0;
@@ -794,7 +806,7 @@
     var endY = target.getBoundingClientRect().top + startY;
     var distance = endY - startY;
     // duração proporcional à distância: suave e deliberada, sem ser lenta demais
-    var duration = Math.max(1200, Math.min(2600, Math.abs(distance) * 1.6));
+    var duration = Math.max(2200, Math.min(3900, Math.abs(distance) * 2.4));
     var startTime = null;
 
     function step(timestamp) {
@@ -802,7 +814,7 @@
       if (startTime === null) startTime = timestamp;
       var elapsed = timestamp - startTime;
       var progress = Math.min(elapsed / duration, 1);
-      window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+      window.scrollTo(0, startY + distance * easeInOutSine(progress));
       if (progress < 1) window.requestAnimationFrame(step);
     }
     window.requestAnimationFrame(step);
