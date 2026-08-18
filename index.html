@@ -782,8 +782,8 @@
 (function () {
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function easeOutQuart(t) {
-    return 1 - Math.pow(1 - t, 4);
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
   }
 
   var activeAnimationId = 0;
@@ -793,8 +793,8 @@
     var startY = window.pageYOffset;
     var endY = target.getBoundingClientRect().top + startY;
     var distance = endY - startY;
-    // duração proporcional à distância, com piso e teto bem altos: rolagem deliberada, tipo apresentação
-    var duration = Math.max(3200, Math.min(5000, Math.abs(distance) * 2.6));
+    // duração proporcional à distância: suave e deliberada, sem ser lenta demais
+    var duration = Math.max(1200, Math.min(2600, Math.abs(distance) * 1.6));
     var startTime = null;
 
     function step(timestamp) {
@@ -802,7 +802,7 @@
       if (startTime === null) startTime = timestamp;
       var elapsed = timestamp - startTime;
       var progress = Math.min(elapsed / duration, 1);
-      window.scrollTo(0, startY + distance * easeOutQuart(progress));
+      window.scrollTo(0, startY + distance * easeInOutCubic(progress));
       if (progress < 1) window.requestAnimationFrame(step);
     }
     window.requestAnimationFrame(step);
