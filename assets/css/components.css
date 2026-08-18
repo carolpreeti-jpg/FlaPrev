@@ -6,9 +6,6 @@
   --p5-primary: #FF0000;
   --p5-error: #D32F2F;
 }
-html {
-  scroll-behavior: smooth;
-}
 /* anchors sit clear of the floating nav buttons instead of flush against the viewport top */
 #topo, #o-plano, #vantagens, #documentos, #aderir, #faq {
   scroll-margin-top: 24px;
@@ -17,9 +14,6 @@ html {
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::marker { content: ""; }
 .faq-item[open] .faq-icon { transform: rotate(180deg); }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-}
 body {
   font-family: 'Manrope', sans-serif;
   background-color: #000000;
