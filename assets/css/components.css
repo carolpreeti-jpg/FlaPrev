@@ -7,7 +7,7 @@
   --p5-error: #D32F2F;
 }
 /* anchors sit clear of the floating nav buttons instead of flush against the viewport top */
-#topo, #o-plano, #vantagens, #documentos, #aderir, #faq {
+#topo, #o-plano, #vantagens, #documentos, #aderir, #faq, #simulador {
   scroll-margin-top: 24px;
 }
 /* FAQ accordion */
